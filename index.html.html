@@ -280,7 +280,7 @@
             color: var(--neutral);
         }
 
-        /* Testimonials */
+        /* Testimonials - IMPROVED */
         .testimonials {
             margin-top: 50px;
             position: relative;
@@ -294,6 +294,7 @@
             padding: 20px 0;
             scrollbar-width: none;
             scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
         }
 
         .testimonial-slider::-webkit-scrollbar {
@@ -301,7 +302,8 @@
         }
 
         .testimonial-card {
-            min-width: 350px;
+            flex: 0 0 calc(100% - 40px);
+            max-width: calc(100% - 40px);
             background: white;
             border-radius: 20px;
             padding: 30px;
@@ -309,6 +311,21 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             border: 1px solid var(--neutral);
             position: relative;
+            margin: 0 20px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 40px);
+                max-width: calc(50% - 40px);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 40px);
+                max-width: calc(33.333% - 40px);
+            }
         }
 
         .testimonial-card:before {
@@ -382,29 +399,22 @@
         }
 
         .video-container, .recycling-image-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
-.video-container iframe, .recycling-image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-        .video-container iframe {
+        .video-container iframe, .recycling-image-container img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: none;
+            object-fit: cover;
         }
 
         /* Video Error Styles */
@@ -530,6 +540,101 @@
             width: 100%;
         }
 
+        /* NEW: UNODC Feature Section */
+        .unodc-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .unodc-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .unodc-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .unodc-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .unodc-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .unodc-text h3 {
+            color: var(--accent1);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* NEW: Book Section */
+        .book-section {
+            padding: 80px 0;
+        }
+
+        .book-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .book-cover {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .book-details {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .book-details h3 {
+            color: var(--accent1);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .book-author {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .book-meta {
+            margin-bottom: 25px;
+        }
+
+        .book-meta p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -587,6 +692,15 @@
                 width: 100%;
                 height: 300px;
             }
+            
+            .unodc-content, .book-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .book-cover {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -643,22 +757,18 @@
     </section>
 
     <section id="founder">
-    <div class="container">
-        <h2 class="section-title">Our Founder</h2>
-        <div class="founder-section">
-            <div class="founder-profile">
-                <div class="founder-image">
-                    
-                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg" alt="Swati Bakshi Purkayastha">
-                    
-                    
-                    <!-- <div class="placeholder"><i class="fas fa-user-tie"></i></div> -->
+        <div class="container">
+            <h2 class="section-title">Our Founder</h2>
+            <div class="founder-section">
+                <div class="founder-profile">
+                    <div class="founder-image">
+                        <img src="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg" alt="Swati Bakshi Purkayastha">
+                    </div>
+                    <div class="founder-info">
+                        <h3>Swati Bakshi Purkayastha</h3>
+                        <div class="founder-title">Independent Education Management Professional</div>
+                    </div>
                 </div>
-                <div class="founder-info">
-                    <h3>Swati Bakshi Purkayastha</h3>
-                    <div class="founder-title">Independent Education Management Professional</div>
-                </div>
-            </div>
                 <div class="program-details">
                     <div class="program-card">
                         <h4>About Funlish</h4>
@@ -689,22 +799,18 @@
                         <p>I have been collaborating with Mrs Swati Bakshi, her fellow teachers and students from her school since 2020. Swati Bakshi is a creative, highly motivated educational leader. She is keen on developing her students' 21-st Century Skills. The Funlishians under the guidance of Swati Baksi have attended some amazing sessions of the Global Readers' Club.</p>
                         <div class="author">— Nadezhda Ivanova, English Teacher, (Krasnoyarsk, Russia)</div>
                     </div>
-<div class="testimonial-card">
-                        <p>I had the privilege of working with Swati Bakshi, Principal of Funlish Language School, on climate-focused initiatives. Swati’s leadership, creativity, and strong sense of purpose were central to the success of our collaborations. She combines her educational expertise with a deep commitment to sustainability, designing projects that not only raise awareness but also inspire action. Her professionalism, collaborative spirit, and ability to bring diverse groups together make her an invaluable partner in any climate or education-related endeavor. I wholeheartedly recommend her for any initiative that seeks both impact and innovation.</p>
-                        <div class="author">— Dr. H.C. Breira Abdullah ,ESD Advocate (Pakistan)</div>
+                    <div class="testimonial-card">
+                        <p>I had the privilege of working with Swati Bakshi, Principal of Funlish Language School, on climate-focused initiatives. Swati's leadership, creativity, and strong sense of purpose were central to the success of our collaborations. She combines her educational expertise with a deep commitment to sustainability, designing projects that not only raise awareness but also inspire action.</p>
+                        <div class="author">— Dr. H.C. Breira Abdullah, ESD Advocate (Pakistan)</div>
                     </div>
-<div class="testimonial-card">
-                        <p>Collaborating with Swati ma'am and her Funlish students has been a truly enriching experience for my students and me. Together, we have worked on projects connected to the Sustainable Development Goals (SDGs) since 2020, which allowed our learners to practice English in meaningful contexts while also reflecting on global challenges. The Funlish team created a positive and supportive environment where students felt confident to share ideas, collaborate creatively, and build lasting friendships across cultures. Greetings from Colombia.</p>
+                    <div class="testimonial-card">
+                        <p>Collaborating with Swati ma'am and her Funlish students has been a truly enriching experience for my students and me. Together, we have worked on projects connected to the Sustainable Development Goals (SDGs) since 2020, which allowed our learners to practice English in meaningful contexts while also reflecting on global challenges.</p>
                         <div class="author">— Tatiana Paez, Educator (Colombia)</div>
                     </div>
-
                     <div class="testimonial-card">
-                        <p>Inside Funlish, I never once felt left out. Ma’am always encouraged me to take part in the latest projects, and it has truly been a blessing to be guided by such a wonderful human being. Her resilience and patience in teaching are beyond comparison, and her unwavering support gave me both the opportunity and the confidence to speak and create on a global stage. Today, when I communicate in English with fluency and pride, I know it is because she laid the foundation stone in my life. For that, I will always remain deeply grateful.</p>
+                        <p>Inside Funlish, I never once felt left out. Ma'am always encouraged me to take part in the latest projects, and it has truly been a blessing to be guided by such a wonderful human being. Her resilience and patience in teaching are beyond comparison, and her unwavering support gave me both the opportunity and the confidence to speak and create on a global stage.</p>
                         <div class="author">— Swarnava Mazumder, Alumni (India)</div>
                     </div>
-                    
-                    
-
                     <div class="testimonial-card">
                         <p>The teachers at Funlish are amazing! They're always patient and encouraging, creating a safe space where we can make mistakes and learn without fear.</p>
                         <div class="author">— Vikram Singh, Class VII</div>
@@ -759,70 +865,111 @@
     </section>
 
     <section id="climate-collabs">
-    <div class="container">
-        <h2 class="section-title">Online Collaborations on Climate Change & International Exchange</h2>
-        <div class="image-gallery">
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_uadt2q.png" alt="Climate Collaboration 1"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 2"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/6_gxzrhl.png" alt="Climate Collaboration 3"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_gt6yrv.png" alt="Climate Collaboration 4"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/4_nyri2d.png" alt="Climate Collaboration 5"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/5_ouwdjr.png" alt="Climate Collaboration 6"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/7_tdxawu.png" alt="Climate Collaboration 7"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 8"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/8_kvybrd.png" alt="Climate Collaboration 9"></div>
+        <div class="container">
+            <h2 class="section-title">Online Collaborations on Climate Change & International Exchange</h2>
+            <div class="image-gallery">
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_uadt2q.png" alt="Climate Collaboration 1"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 2"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/6_gxzrhl.png" alt="Climate Collaboration 3"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_gt6yrv.png" alt="Climate Collaboration 4"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/4_nyri2d.png" alt="Climate Collaboration 5"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/5_ouwdjr.png" alt="Climate Collaboration 6"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/7_tdxawu.png" alt="Climate Collaboration 7"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 8"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/8_kvybrd.png" alt="Climate Collaboration 9"></div>
             </div>
-    </div>
-</section>
+        </div>
+    </section>
 
     <section id="top-performers">
         <div class="container">
             <h2 class="section-title">Our Top Performers</h2>
             <div class="image-gallery">
                 <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_itnd79.png" alt="Top Performer 1"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_hysiol.png" alt="Top Performer 2"></div>
-            <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_laznnv.png" alt="Top Performer 3"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_hysiol.png" alt="Top Performer 2"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_laznnv.png" alt="Top Performer 3"></div>
             </div>
         </div>
     </section>
 
-    <!-- Updated -->
-<section id="recycling-campaign">
-    <div class="container">
-        <h2 class="section-title">Electronic Product Recycling Campaign</h2>
-        <div class="image-gallery">
-            <div class="recycling-image-container">
-                <img src="https://res.cloudinary.com/dokuekd32/image/upload/1_eirhva.png" alt="Waste Collection">
-            </div>
-            <div class="recycling-image-container">
-                <img src="https://res.cloudinary.com/dokuekd32/image/upload/2_rdwuga.png" alt="Waste Collection">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="media-coverage" style="background-color: #f8f9fa; padding: 80px 0;">
-    <div class="container">
-        <h2 class="section-title">Covered by Jagran Josh</h2>
-        <div class="media-content" style="text-align: center; margin: 40px 0;">
-            <div style="max-width: 800px; margin: 0 auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                <p style="margin-bottom: 25px; font-size: 1.1rem;">Funlish was recently featured in Jagran Josh for our impactful RiseUp4Peace initiative, where youth advocates spread awareness on disability rights and inclusive classrooms.</p>
-                
-                <!-- Your image -->
-                <div style="margin: 30px 0; text-align: center;">
-                    <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    <section id="recycling-campaign">
+        <div class="container">
+            <h2 class="section-title">Electronic Product Recycling Campaign</h2>
+            <div class="image-gallery">
+                <div class="recycling-image-container">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/1_eirhva.png" alt="Waste Collection">
                 </div>
-                
-                <a href="https://www.jagranjosh.com/news/riseup4peace-initiative-youth-advocates-spread-awareness-on-disability-rights-and-inclusive-classrooms-173535" 
-                   target="_blank" 
-                   class="btn" 
-                   style="display: inline-block; margin: 10px; background-color: #fd700e; color: white;">
-                   Read the Article
-                </a>
+                <div class="recycling-image-container">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/2_rdwuga.png" alt="Waste Collection">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="media-coverage" style="background-color: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Covered by Jagran Josh</h2>
+            <div class="media-content" style="text-align: center; margin: 40px 0;">
+                <div style="max-width: 800px; margin: 0 auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <p style="margin-bottom: 25px; font-size: 1.1rem;">Funlish was recently featured in Jagran Josh for our impactful RiseUp4Peace initiative, where youth advocates spread awareness on disability rights and inclusive classrooms.</p>
+                    
+                    <div style="margin: 30px 0; text-align: center;">
+                        <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    
+                    <a href="https://www.jagranjosh.com/news/riseup4peace-initiative-youth-advocates-spread-awareness-on-disability-rights-and-inclusive-classrooms-173535" 
+                       target="_blank" 
+                       class="btn" 
+                       style="display: inline-block; margin: 10px; background-color: #fd700e; color: white;">
+                       Read the Article
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: UNODC Feature Section -->
+    <section class="unodc-section">
+        <div class="container">
+            <h2 class="section-title">Featured by UNODC</h2>
+            <div class="unodc-content">
+                <div class="unodc-image">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/eDUmAIN2_gtgppn.jpg" alt="UNODC Feature">
+                </div>
+                <div class="unodc-text">
+                    <h3>Global Educator Recognition</h3>
+                    <p>Swati Bakshi Purkayastha, Founder of the Funlish Language School (West Bengal) is one of the 132 educators from India and beyond who participated in the monthly capacity-boosting dialogue organized by UNODC's Education for Justice initiative.</p>
+                    <p>This recognition highlights her commitment to promoting ethical values, global citizenship, and innovative educational approaches that align with the United Nations' Sustainable Development Goals.</p>
+                    <a href="https://www.unodc.org/southasia/frontpage/2024/May/india_-educators-receive-capacity-boost-to-foster-inclusive-classrooms--join-hands-to-champion-sdg16-with-unodcs-riseup4peace.html" target="_blank" class="btn" style="margin-top: 20px;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Book Section -->
+    <section class="book-section">
+        <div class="container">
+            <h2 class="section-title">ICSE English Papers Class X</h2>
+            <div class="book-content">
+                <div class="book-cover">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/814EajOCkWL._SL1500__kfwre1.jpg" alt="ICSE English Papers Class X Book Cover">
+                </div>
+                <div class="book-details">
+                    <h3>ICSE English Papers Class X</h3>
+                    <div class="book-author">by Swati Bakshi Purkayastha (Author)</div>
+                    <div class="book-meta">
+                        <p><strong>Ships from Amazon</strong></p>
+                        <p><strong>ISBN-10:</strong> 9356666849</p>
+                        <p><strong>ISBN-13:</strong> 978-9356666849</p>
+                        <p><strong>Pages:</strong> 260 pages</p>
+                    </div>
+                    <p>This comprehensive guide helps students master the ICSE English curriculum with practice papers, detailed explanations, and expert tips. Perfect for exam preparation and improving overall English language skills.</p>
+                    <a href="https://www.amazon.in/Frank-Successful-English-Papers-Class/dp/9356666849?ref_=ast_author_mpb" target="_blank" class="btn" style="margin-top: 20px;">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Join the Fun!</h2>
@@ -853,19 +1000,24 @@
             let scrollAmount = 0;
             const scrollStep = 380;
             let autoScrollInterval;
+            let isScrolling = false;
             
             // Function to scroll testimonials
             function scrollTestimonials(direction) {
+                if (isScrolling) return;
+                
+                isScrolling = true;
                 const containerWidth = slider.clientWidth;
                 const scrollWidth = slider.scrollWidth;
+                const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 30; // width + gap
                 
                 if (direction === 'next') {
-                    scrollAmount += scrollStep;
+                    scrollAmount += cardWidth;
                     if (scrollAmount >= scrollWidth - containerWidth) {
                         scrollAmount = 0;
                     }
                 } else {
-                    scrollAmount -= scrollStep;
+                    scrollAmount -= cardWidth;
                     if (scrollAmount < 0) {
                         scrollAmount = scrollWidth - containerWidth;
                     }
@@ -875,6 +1027,11 @@
                     left: scrollAmount,
                     behavior: 'smooth'
                 });
+                
+                // Reset scrolling flag after animation completes
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 500);
             }
             
             // Set up auto-scroll every 10 seconds
@@ -910,10 +1067,33 @@
             slider.addEventListener('mouseleave', startAutoScroll);
             
             // Support for touch devices
-            slider.addEventListener('touchstart', stopAutoScroll);
-            slider.addEventListener('touchend', () => {
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            slider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAutoScroll();
+            });
+            
+            slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
                 setTimeout(startAutoScroll, 5000); // Restart after 5 seconds of inactivity
             });
+            
+            function handleSwipe() {
+                const minSwipeDistance = 50;
+                
+                if (touchEndX < touchStartX && touchStartX - touchEndX > minSwipeDistance) {
+                    // Swipe left - next
+                    scrollTestimonials('next');
+                } 
+                
+                if (touchEndX > touchStartX && touchEndX - touchStartX > minSwipeDistance) {
+                    // Swipe right - previous
+                    scrollTestimonials('prev');
+                }
+            }
 
             // Add error handling for YouTube videos
             document.querySelectorAll('.video-container iframe').forEach(iframe => {
