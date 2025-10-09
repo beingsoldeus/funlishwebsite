@@ -636,6 +636,25 @@
             font-size: 0.95rem;
         }
 
+        /* NEW: Facebook Embed Section */
+        .facebook-embed-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .facebook-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .fb-page {
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -706,6 +725,10 @@
     </style>
 </head>
 <body>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v24.0"></script>
+
     <div class="container">
         <header>
             <!-- Logo could be added here -->
@@ -882,6 +905,28 @@
                 <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/7_tdxawu.png" alt="Climate Collaboration 7"></div>
                 <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/abe25a71-d47e-4ea0-8728-4f81f2229340_prnhwf.jpg" alt="Climate Collaboration 8"></div>
                 <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/8_kvybrd.png" alt="Climate Collaboration 9"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Facebook Embed Section -->
+    <section class="facebook-embed-section">
+        <div class="container">
+            <h2 class="section-title">Follow Us on Facebook</h2>
+            <div class="facebook-container">
+                <div class="fb-page" 
+                     data-href="https://www.facebook.com/Funlish/" 
+                     data-tabs="timeline" 
+                     data-width="" 
+                     data-height="" 
+                     data-small-header="false" 
+                     data-adapt-container-width="true" 
+                     data-hide-cover="false" 
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Funlish/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/Funlish/">Funlish- Fun With English</a>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </section>
@@ -1127,4 +1172,3 @@
     </script>
 </body>
 </html>
-
