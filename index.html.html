@@ -103,10 +103,7 @@
             padding: 0 20px;
         }
 
-        /* Header & Hero */
-        header {
-            padding: 20px 0;
-        }
+        header { padding: 20px 0; }
 
         .hero {
             text-align: center;
@@ -121,11 +118,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
+        .hero p { font-size: 1.5rem; margin-bottom: 40px; font-weight: 300; }
 
         .btn {
             display: inline-block;
@@ -159,11 +152,7 @@
             color: var(--text);
         }
 
-        /* Sections */
-        section {
-            padding: 80px 0;
-            background-color: white;
-        }
+        section { padding: 80px 0; background-color: white; }
 
         .section-title {
             text-align: center;
@@ -194,7 +183,6 @@
             font-size: 1.1rem;
         }
 
-        /* Features */
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -229,7 +217,6 @@
             color: var(--accent1);
         }
 
-        /* Founder Section */
         .founder-section {
             text-align: center;
             padding: 60px 0;
@@ -244,11 +231,9 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            object-fit: cover;
             border: 5px solid var(--accent2);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 25px;
-            background-color: #f5f5f5;
             overflow: hidden;
         }
 
@@ -257,6 +242,12 @@
             height: 100%;
             object-fit: cover;
             loading: lazy;
+        }
+
+        .founder-info h3 {
+            font-size: 1.8rem;
+            color: var(--accent1);
+            margin-bottom: 10px;
         }
 
         .program-details {
@@ -287,9 +278,7 @@
             transition: transform 0.3s ease;
         }
 
-        .image-container:hover {
-            transform: scale(1.02);
-        }
+        .image-container:hover { transform: scale(1.02); }
 
         .image-container img {
             width: 100%;
@@ -298,7 +287,7 @@
             loading: lazy;
         }
 
-        /* Testimonial Slider - Fully Responsive */
+        /* TESTIMONIALS - FULLY RESPONSIVE */
         .testimonials {
             margin-top: 50px;
             position: relative;
@@ -399,7 +388,6 @@
         .testimonial-nav-btn.prev { margin-left: -25px; }
         .testimonial-nav-btn.next { margin-right: -25px; }
 
-        /* Gallery */
         .video-gallery, .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -444,6 +432,12 @@
             border-radius: 15px;
         }
 
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         .social-link {
             display: inline-block;
             margin: 30px 10px 0;
@@ -463,7 +457,50 @@
             background-color: white;
         }
 
-        /* Responsive */
+        footer p { font-size: 0.9rem; }
+
+        .unodc-section, .book-section, .facebook-embed-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .unodc-content, .book-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .unodc-image, .book-cover {
+            flex: 1;
+            min-width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .unodc-image img, .book-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+            loading: lazy;
+        }
+
+        .facebook-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .fb-page {
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.2rem; }
@@ -473,11 +510,12 @@
             .founder-image { width: 150px; height: 150px; }
             .testimonial-nav { display: none !important; }
             .testimonial-card p { font-size: 0.95rem; }
+            .unodc-content, .book-content { flex-direction: column; text-align: center; }
+            .book-cover { margin: 0 auto; max-width: 250px; }
         }
     </style>
 </head>
 <body>
-    <!-- Facebook SDK (Async) -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v24.0"></script>
 
@@ -492,16 +530,82 @@
         </section>
     </div>
 
-    <!-- [Rest of your sections - same as before] -->
-    <!-- Only showing key updated parts below for brevity -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Funlish</h2>
+            <div class="about-content">
+                <p>Funlish is a dynamic learning center where over 1,000 students from classes V to XII dive into the world of English language and literature. Specializing in ICSE and ISC English, we transform learning into an adventure with fun-filled games, exciting contests, and innovative activities. Join Funlish to ignite your passion for English and excel with confidence!</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- TESTIMONIALS -->
+    <section id="different">
+        <div class="container">
+            <h2 class="section-title">Why Funlish is Different</h2>
+            <div class="different-content">
+                <p>At Funlish, students join a global community, collaborating online with peers and top educators from countries like the USA, UK, Russia, Canada, Malaysia, Singapore, Romania, and beyond. Our founder, Mrs. Swati Bakshi, champions the idea that "learning and technology blend beautifully when used wisely." With a heart for education, environmental care, and charity, she leads a vibrant hub where students thrive in English and grow as global citizens. Join Funlish to connect, learn, and shine!</p>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Connections</h3>
+                    <p>Collaborate with students worldwide through our international partnerships.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Learning Through Play</h3>
+                    <p>Our games and contests make mastering English enjoyable and effective.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Exam Excellence</h3>
+                    <p>Specialized support for ICSE & ISC English exams with proven results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder">
+        <div class="container">
+            <h2 class="section-title">Our Founder</h2>
+            <div class="founder-section">
+                <div class="founder-profile">
+                    <div class="founder-image">
+                        <img src="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg" alt="Swati Bakshi Purkayastha">
+                    </div>
+                    <div class="founder-info">
+                        <h3>Swati Bakshi Purkayastha</h3>
+                        <div class="founder-title">Independent Education Management Professional</div>
+                    </div>
+                </div>
+                <div class="program-details">
+                    <div class="program-card">
+                        <h4>About Funlish</h4>
+                        <p>Funlish inspires students from primary to high school to love English through fun quizzes, creative writing, drama, and more. We boost reading, writing, and communication skills, unlocking the endless possibilities of English!</p>
+                        <div class="image-container">
+                            <img src="https://res.cloudinary.com/dokuekd32/image/upload/v1756896851/224332367_1891758380984725_1027602030616335202_n_geymce.png" alt="English Language Learning">
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <h4>About TCPDI</h4>
+                        <p>TCPDI, an NGO in a Kolkata suburb, transforms lives by educating socio-economically disadvantaged children for peace in violence-prone communities. Collaborating with Duke University students for two years, we nurture harmony and hope.</p>
+                        <div class="image-container">
+                            <img src="https://images.pexels.com/photos/33770555/pexels-photo-33770555.jpeg" alt="Community Education">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS - ALL 8 (3 NEW + 5 OLD) -->
     <section id="testimonials">
         <div class="container">
             <h2 class="section-title">What People Say</h2>
             <div class="testimonials">
                 <div class="testimonial-slider" id="testimonialSlider">
-                    <!-- 3 New Alumni -->
+                    <!-- NEW ALUMNI -->
                     <div class="testimonial-card">
                         <p>“I owe my love for writing and creativity to Swati Baksi Ma’am. She believed in me, guided me to publish my first book, and changed the course of my life forever.”</p>
                         <div class="author">— Sarba Roy, Alumni (India)</div>
@@ -515,8 +619,27 @@
                         <div class="author">— Snehashis Nath, Alumni (India)</div>
                     </div>
 
-                    <!-- [Other 5 testimonials - same as before] -->
-                    <!-- ... -->
+                    <!-- EXISTING -->
+                    <div class="testimonial-card">
+                        <p>I have been collaborating with Mrs Swati Bakshi, her fellow teachers and students from her school since 2020. Swati Bakshi is a creative, highly motivated educational leader. She is keen on developing her students' 21-st Century Skills. The Funlishians under the guidance of Swati Baksi have attended some amazing sessions of the Global Readers' Club.</p>
+                        <div class="author">— Nadezhda Ivanova, English Teacher, (Krasnoyarsk, Russia)</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Her dedication to fostering international connections and nurturing global citizens is truly commendable. May this partnership continue to flourish, inspiring more meaningful exchanges and lifelong connections.</p>
+                        <div class="author">— Mrs Nirmaladevi Kandasamy,ESL Expert, SK St Patrick (Malaysia)</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>I had the privilege of working with Swati Bakshi, Principal of Funlish Language School, on climate-focused initiatives. Swati's leadership, creativity, and strong sense of purpose were central to the success of our collaborations. She combines her educational expertise with a deep commitment to sustainability, designing projects that not only raise awareness but also inspire action.</p>
+                        <div class="author">— Dr. H.C. Breira Abdullah, ESD Advocate (Pakistan)</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Collaborating with Swati ma'am and her Funlish students has been a truly enriching experience for my students and me. Together, we have worked on projects connected to the Sustainable Development Goals (SDGs) since 2020, which allowed our learners to practice English in meaningful contexts while also reflecting on global challenges.</p>
+                        <div class="author">— Tatiana Paez, Educator (Colombia)</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Inside Funlish, I never once felt left out. Ma'am always encouraged me to take part in the latest projects, and it has truly been a blessing to be guided by such a wonderful human being. Her resilience and patience in teaching are beyond comparison, and her unwavering support gave me both the opportunity and the confidence to speak and create on a global stage.</p>
+                        <div class="author">— Swarnava Mazumder, Alumni (India)</div>
+                    </div>
                 </div>
 
                 <div class="testimonial-nav">
@@ -527,8 +650,154 @@
         </div>
     </section>
 
-    <!-- [Include all other sections: gallery, climate, Facebook, etc.] -->
-    <!-- ... (same as previous full code) -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Funlish in Action</h2>
+            <div class="video-gallery">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/D0kS9FuPzuU" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/TKhiuwfANYI" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/gKTrw1Mvkno" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/vio3Qy7IjxI" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/9ys6G3Zi58o" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/dOD4I1ssCZM" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/cju_mXVq8fk" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/-ARs1FhucPw" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/R96RBFk_IMM" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="climate-collabs">
+        <div class="container">
+            <h2 class="section-title">Online Collaborations on Climate Change & International Exchange</h2>
+            <div class="image-gallery">
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_uadt2q.png" alt="Climate Collaboration 1" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 2" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/6_gxzrhl.png" alt="Climate Collaboration 3" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_gt6yrv.png" alt="Climate Collaboration 4" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/4_nyri2d.png" alt="Climate Collaboration 5" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/5_ouwdjr.png" alt="Climate Collaboration 6" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/7_tdxawu.png" alt="Climate Collaboration 7" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/abe25a71-d47e-4ea0-8728-4f81f2229340_prnhwf.jpg" alt="Climate Collaboration 8" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/8_kvybrd.png" alt="Climate Collaboration 9" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facebook-embed-section">
+        <div class="container">
+            <h2 class="section-title">Follow Us on Facebook</h2>
+            <div class="facebook-container">
+                <div class="fb-page" 
+                     data-href="https://www.facebook.com/Funlish/" 
+                     data-tabs="timeline" 
+                     data-width="" 
+                     data-height="" 
+                     data-small-header="false" 
+                     data-adapt-container-width="true" 
+                     data-hide-cover="false" 
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Funlish/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/Funlish/">Funlish- Fun With English</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="top-performers">
+        <div class="container">
+            <h2 class="section-title">Our Top Performers</h2>
+            <div class="image-gallery">
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_itnd79.png" alt="Top Performer 1" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_hysiol.png" alt="Top Performer 2" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_laznnv.png" alt="Top Performer 3" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recycling-campaign">
+        <div class="container">
+            <h2 class="section-title">Electronic Product Recycling Campaign</h2>
+            <div class="image-gallery">
+                <div class="recycling-image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_eirhva.png" alt="Waste Collection" loading="lazy"></div>
+                <div class="recycling-image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_rdwuga.png" alt="Waste Collection" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="media-coverage" style="background-color: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Covered by Jagran Josh</h2>
+            <div style="text-align: center; margin: 40px 0;">
+                <div style="max-width: 800px; margin: 0 auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <p style="margin-bottom: 25px; font-size: 1.1rem;">Funlish was recently featured in Jagran Josh for our impactful RiseUp4Peace initiative, where youth advocates spread awareness on disability rights and inclusive classrooms.</p>
+                    <div style="margin: 30px 0; text-align: center;">
+                        <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" loading="lazy">
+                    </div>
+                    <a href="https://www.jagranjosh.com/news/riseup4peace-initiative-youth-advocates-spread-awareness-on-disability-rights-and-inclusive-classrooms-173535" target="_blank" class="btn" style="background-color: #fd700e; color: white;">
+                       Read the Article
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="unodc-section">
+        <div class="container">
+            <h2 class="section-title">Featured by UNODC</h2>
+            <div class="unodc-content">
+                <div class="unodc-image">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/eDUmAIN2_gtgppn.jpg" alt="UNODC Feature" loading="lazy">
+                </div>
+                <div class="unodc-text">
+                    <h3>Global Educator Recognition</h3>
+                    <p>Swati Bakshi Purkayastha, Founder of the Funlish Language School (West Bengal) is one of the 132 educators from India and beyond who participated in the monthly capacity-boosting dialogue organized by UNODC's Education for Justice initiative.</p>
+                    <p>This recognition highlights her commitment to promoting ethical values, global citizenship, and innovative educational approaches that align with the United Nations' Sustainable Development Goals.</p>
+                    <a href="https://www.unodc.org/southasia/frontpage/2024/May/india_-educators-receive-capacity-boost-to-foster-inclusive-classrooms--join-hands-to-champion-sdg16-with-unodcs-riseup4peace.html" target="_blank" class="btn" style="margin-top: 20px;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="container">
+            <h2 class="section-title">ICSE English Papers Class X</h2>
+            <div class="book-content">
+                <div class="book-cover">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/814EajOCkWL._SL1500__kfwre1.jpg" alt="ICSE English Papers Class X Book Cover" loading="lazy">
+                </div>
+                <div class="book-details">
+                    <h3>ICSE English Papers Class X</h3>
+                    <div class="book-author">by Swati Bakshi Purkayastha (Author)</div>
+                    <div class="book-meta">
+                        <p><strong>Ships from Amazon</strong></p>
+                        <p><strong>ISBN-10:</strong> 9356666849</p>
+                        <p><strong>ISBN-13:</strong> 978-9356666849</p>
+                        <p><strong>Pages:</strong> 260 pages</p>
+                    </div>
+                    <p>This comprehensive guide helps students master the ICSE English curriculum with practice papers, detailed explanations, and expert tips. Perfect for exam preparation and improving overall English language skills.</p>
+                    <a href="https://www.amazon.in/Frank-Successful-English-Papers-Class/dp/9356666849?ref_=ast_author_mpb" target="_blank" class="btn" style="margin-top: 20px;">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Join the Fun!</h2>
+            <div class="contact-content">
+                <p>Ready to have fun with English? Connect with us to learn more about our programs.</p>
+                <a href="https://www.facebook.com/Funlish" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@FUNLISHFUNTIME" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://in.linkedin.com/in/swati-bakshi-purkayastha-83832a7" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <div style="margin-top: 40px;">
+                    <a href="#contact" class="btn">Join Us Today!</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -536,7 +805,6 @@
         </div>
     </footer>
 
-    <!-- Optimized Script (Deferred) -->
     <script defer>
         document.addEventListener('DOMContentLoaded', function() {
             const slider = document.getElementById('testimonialSlider');
@@ -595,7 +863,6 @@
             nextBtn?.addEventListener('click', () => { stopAutoScroll(); nextSlide(); startAutoScroll(); });
             prevBtn?.addEventListener('click', () => { stopAutoScroll(); prevSlide(); startAutoScroll(); });
 
-            // Touch & Mouse Drag
             ['touchstart', 'mousedown'].forEach(evt => {
                 slider.addEventListener(evt, e => {
                     startX = evt === 'touchstart' ? e.touches[0].clientX : e.pageX;
@@ -630,7 +897,6 @@
                 setTimeout(startAutoScroll, 1000);
             });
 
-            // Lazy Load YouTube
             document.querySelectorAll('.video-container iframe').forEach(iframe => {
                 iframe.loading = 'lazy';
                 iframe.onerror = function() {
@@ -645,16 +911,5 @@
             });
         });
     </script>
-
-    <!-- Google Analytics (Optional - Add your ID) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX');
-    </script>
-    -->
 </body>
 </html>
