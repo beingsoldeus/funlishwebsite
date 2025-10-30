@@ -1,22 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funlish Language School | Have Fun With English!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Funlish Language School | ICSE/ISC English Classes | Kolkata</title>
+    <meta name="description" content="Funlish Language School offers fun, interactive ICSE & ISC English classes for students in Kolkata. Join 1000+ students for global collaborations, creative writing, drama, and exam success.">
+    <meta name="keywords" content="Funlish, English classes Kolkata, ICSE English, ISC English, Swati Bakshi, online English learning, global education, creative writing for kids">
+    <meta name="author" content="Swati Bakshi Purkayastha">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://funlish.in">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Funlish Language School | Have Fun With English!">
+    <meta property="og:description" content="Transform English learning with games, global projects, and expert guidance. ICSE/ISC specialist in Kolkata.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funlish.in">
+    <meta property="og:image" content="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg">
+    <meta property="og:image:alt" content="Swati Bakshi Purkayastha - Founder of Funlish">
+    <meta property="og:site_name" content="Funlish Language School">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Funlish Language School | ICSE/ISC English Excellence">
+    <meta name="twitter:description" content="Fun-filled English learning with global collaborations. Join us in Kolkata!">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg">
+    <meta name="twitter:site" content="@FunlishSchool">
+
+    <!-- Favicon & Preload Critical Resources -->
     <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dokuekd32/image/upload/be063ad8-c660-42a9-8ccd-db48d6bf708d_dwru5k.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" as="style">
+    <link rel="preload" href="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg" as="image">
+
+    <!-- Fonts (Async Load) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Font Awesome (Async) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Funlish Language School",
+      "url": "https://funlish.in",
+      "logo": "https://res.cloudinary.com/dokuekd32/image/upload/be063ad8-c660-42a9-8ccd-db48d6bf708d_dwru5k.png",
+      "description": "Funlish is a leading English language school in Kolkata specializing in ICSE and ISC curriculum with creative, fun, and global learning methods.",
+      "founder": {
+        "@type": "Person",
+        "name": "Swati Bakshi Purkayastha"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.facebook.com/Funlish"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Funlish",
+        "https://www.youtube.com/@FUNLISHFUNTIME",
+        "https://in.linkedin.com/in/swati-bakshi-purkayastha-83832a7"
+      ]
+    }
+    </script>
+
     <style>
         :root {
-            --primary: #14e7e7;
-            --primary1: #006eff;
-            --text: #4f5453;
-            --accent1: #fd700e;
-            --accent2: #ffca02;
-            --neutral: #c0bf9b;
+            --primary: #0fb9b1;
+            --primary-light: #7fffd4;
+            --primary-dark: #0a8a84;
+            --secondary: #ff7e5f;
+            --secondary-light: #ffb8a6;
+            --accent: #f9c74f;
+            --accent-light: #fde8a6;
+            --text-dark: #2d3436;
+            --text-medium: #636e72;
+            --text-light: #b2bec3;
+            --white: #ffffff;
+            --light-bg: #f8f9fa;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 16px;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -25,11 +100,16 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            background-color: var(--primary);
+            color: var(--text-medium);
+            background-color: var(--white);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
@@ -38,73 +118,172 @@
             padding: 0 20px;
         }
 
-        /* Header & Hero */
-        header {
+        header { 
             padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
         }
 
         .hero {
             text-align: center;
-            padding: 80px 0 100px;
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill="%23ffffff"/></svg>');
+            background-size: 100% 100px;
+            background-position: bottom;
+            background-repeat: no-repeat;
         }
 
         .hero h1 {
             font-family: 'Fredoka One', cursive;
             font-size: 4rem;
-            margin-bottom: 15px;
-            color: var(--accent1);
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
+        .hero p { 
+            font-size: 1.5rem; 
+            margin-bottom: 40px; 
             font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent2);
-            color: var(--text);
+            padding: 14px 32px;
+            background-color: var(--accent);
+            color: var(--text-dark);
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
             border: none;
             cursor: pointer;
+            font-size: 1rem;
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            background-color: var(--accent1);
-            color: white;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background-color: var(--secondary);
+            color: var(--white);
         }
 
         .btn-outline {
             background-color: transparent;
-            border: 2px solid var(--accent2);
+            border: 2px solid var(--accent);
+            color: var(--accent);
             margin-left: 15px;
         }
 
         .btn-outline:hover {
-            background-color: var(--accent2);
-            color: var(--text);
+            background-color: var(--accent);
+            color: var(--text-dark);
         }
 
-        /* Sections */
-        section {
-            padding: 80px 0;
-            background-color: white;
+        section { 
+            padding: 100px 0; 
+            position: relative;
+        }
+
+        .section-bg {
+            background-color: var(--light-bg);
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: var(--accent1);
+            margin-bottom: 60px;
+            color: var(--primary-dark);
             position: relative;
             display: inline-block;
             left: 50%;
@@ -114,11 +293,12 @@
         .section-title:after {
             content: '';
             position: absolute;
-            width: 50%;
+            width: 80px;
             height: 4px;
-            background: var(--accent2);
-            bottom: -10px;
-            left: 25%;
+            background: var(--accent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
             border-radius: 2px;
         }
 
@@ -127,9 +307,9 @@
             margin: 0 auto;
             text-align: center;
             font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        /* Why Different Section */
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -139,91 +319,98 @@
         }
 
         .feature-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
             width: 300px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid rgba(192, 191, 155, 0.3);
-            transition: transform 0.3s ease;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+            text-align: center;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            border-color: var(--neutral);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--secondary);
         }
 
         .feature-card i {
-            font-size: 2.5rem;
-            color: var(--accent1);
-            margin-bottom: 20px;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: inline-block;
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
         }
 
         .feature-card h3 {
             margin-bottom: 15px;
-            color: var(--accent1);
+            color: var(--primary-dark);
+            font-size: 1.4rem;
         }
 
-        /* Founder Section */
         .founder-section {
             text-align: center;
-            padding: 60px 0;
-            background-color: rgba(255,255,255,0.9);
-            border-radius: 20px;
+            padding: 60px 40px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
             margin: 40px auto;
             max-width: 900px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
         }
 
         .founder-profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin-bottom: 40px;
         }
 
         .founder-image {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--accent2);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 5px solid var(--accent);
+            box-shadow: var(--shadow);
+            margin: 0 auto 25px;
             overflow: hidden;
+            position: relative;
         }
 
         .founder-image img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            loading: lazy;
+            transition: var(--transition);
         }
 
-        .founder-image .placeholder {
-            font-size: 4rem;
-            color: var(--neutral);
+        .founder-image:hover img {
+            transform: scale(1.05);
         }
 
         .founder-info h3 {
             font-size: 1.8rem;
-            color: var(--accent1);
+            color: var(--primary-dark);
             margin-bottom: 10px;
         }
 
         .founder-title {
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .founder-bio {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: left;
-            padding: 0 20px;
+            color: var(--text-medium);
+            font-style: italic;
         }
 
         .program-details {
@@ -235,98 +422,100 @@
         }
 
         .program-card {
-            background: white;
-            border-radius: 20px;
+            background: var(--white);
+            border-radius: var(--border-radius);
             padding: 30px;
             width: 100%;
             max-width: 400px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid rgba(192, 191, 155, 0.3);
-            position: relative;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
         .program-card h4 {
-            color: var(--accent1);
-            font-size: 1.3rem;
+            color: var(--primary-dark);
             margin-bottom: 15px;
-            text-align: center;
+            font-size: 1.3rem;
         }
 
         .image-container {
             height: 200px;
             background-color: #f5f5f5;
-            border-radius: 15px;
+            border-radius: 12px;
             margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
             position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: var(--transition);
         }
 
-        .image-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        .image-container:hover { 
+            transform: scale(1.02); 
         }
 
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            loading: lazy;
+            transition: var(--transition);
         }
 
-        .image-container i {
-            font-size: 3rem;
-            color: var(--neutral);
+        .image-container:hover img {
+            transform: scale(1.05);
         }
 
-        /* Testimonials - IMPROVED */
+        /* TESTIMONIALS - FULLY RESPONSIVE */
         .testimonials {
             margin-top: 50px;
             position: relative;
+            overflow: hidden;
         }
 
         .testimonial-slider {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            gap: 30px;
+            gap: 20px;
             padding: 20px 0;
             scrollbar-width: none;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
+            cursor: grab;
         }
 
-        .testimonial-slider::-webkit-scrollbar {
-            display: none;
-        }
+        .testimonial-slider::-webkit-scrollbar { display: none; }
+        .testimonial-slider:active { cursor: grabbing; }
 
         .testimonial-card {
             flex: 0 0 calc(100% - 40px);
             max-width: calc(100% - 40px);
-            background: white;
-            border-radius: 20px;
+            background: var(--white);
+            border-radius: var(--border-radius);
             padding: 30px;
             scroll-snap-align: start;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid var(--neutral);
-            position: relative;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
             margin: 0 20px;
+            transition: var(--transition);
+            position: relative;
         }
 
-        @media (min-width: 768px) {
-            .testimonial-card {
-                flex: 0 0 calc(50% - 40px);
-                max-width: calc(50% - 40px);
-            }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        @media (min-width: 640px) {
+            .testimonial-card { flex: 0 0 calc(50% - 40px); max-width: calc(50% - 40px); }
         }
 
         @media (min-width: 1024px) {
-            .testimonial-card {
-                flex: 0 0 calc(33.333% - 40px);
-                max-width: calc(33.333% - 40px);
-            }
+            .testimonial-card { flex: 0 0 calc(33.333% - 40px); max-width: calc(33.333% - 40px); }
         }
 
         .testimonial-card:before {
@@ -335,7 +524,7 @@
             position: absolute;
             top: 10px;
             left: 20px;
-            color: rgba(192, 191, 155, 0.2);
+            color: var(--primary-light);
             font-family: serif;
             line-height: 1;
         }
@@ -345,11 +534,14 @@
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         .testimonial-card .author {
             font-weight: 600;
-            color: var(--accent1);
+            color: var(--primary-dark);
+            font-size: 0.95rem;
         }
 
         .testimonial-nav {
@@ -360,10 +552,11 @@
             justify-content: space-between;
             transform: translateY(-50%);
             pointer-events: none;
+            z-index: 10;
         }
 
         .testimonial-nav-btn {
-            background-color: var(--accent1);
+            background-color: var(--primary);
             color: white;
             width: 50px;
             height: 50px;
@@ -373,25 +566,18 @@
             justify-content: center;
             cursor: pointer;
             pointer-events: auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 10;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
 
         .testimonial-nav-btn:hover {
-            background-color: var(--accent2);
+            background-color: var(--secondary);
             transform: scale(1.1);
         }
 
-        .testimonial-nav-btn.prev {
-            margin-left: -25px;
-        }
+        .testimonial-nav-btn.prev { margin-left: -25px; }
+        .testimonial-nav-btn.next { margin-right: -25px; }
 
-        .testimonial-nav-btn.next {
-            margin-right: -25px;
-        }
-
-        /* Gallery */
         .video-gallery, .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -404,8 +590,14 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .video-container:hover, .recycling-image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
         .video-container iframe, .recycling-image-container img {
@@ -416,9 +608,9 @@
             height: 100%;
             border: none;
             object-fit: cover;
+            loading: lazy;
         }
 
-        /* Video Error Styles */
         .video-error {
             position: absolute;
             top: 0;
@@ -430,124 +622,60 @@
             align-items: center;
             justify-content: center;
             background: #f5f5f5;
-            color: var(--text);
+            color: var(--text-dark);
             text-align: center;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 12px;
         }
 
-        .video-error i {
-            font-size: 3rem;
-            color: var(--accent1);
-            margin-bottom: 15px;
-        }
-
-        .video-error .btn {
-            margin-top: 15px;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-        }
-
-        /* Portrait Styles */
-        .portrait-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .portrait-container {
-            height: 400px;
-            width: 300px;
-            background-color: #f5f5f5;
-            border-radius: 15px;
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .portrait-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        .portrait-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .portrait-container i {
-            font-size: 4rem;
-            color: var(--neutral);
-        }
-
-        /* Contact */
         .contact-content {
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
         }
 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
         .social-link {
-            display: inline-block;
-            margin: 30px 10px 0;
-            font-size: 1.5rem;
-            color: var(--text);
-            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
         }
 
         .social-link:hover {
-            color: var(--primary1);
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
         }
 
-        /* Footer */
         footer {
             text-align: center;
-            padding: 30px 0;
-            background-color: white;
+            padding: 40px 0;
+            background-color: var(--primary-dark);
+            color: var(--white);
         }
 
-        footer p {
-            font-size: 0.9rem;
-        }
+        footer p { font-size: 0.9rem; }
 
-        /* Animations */
-        @keyframes underline {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .underline-hover {
-            position: relative;
-            display: inline-block;
-        }
-
-        .underline-hover:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--accent2);
-            transition: width 0.3s ease;
-        }
-
-        .underline-hover:hover:after {
-            width: 100%;
-        }
-
-        /* NEW: UNODC Feature Section */
-        .unodc-section {
-            background-color: #f8f9fa;
+        .unodc-section, .book-section, .facebook-embed-section {
+            background-color: var(--light-bg);
             padding: 80px 0;
         }
 
-        .unodc-content {
+        .unodc-content, .book-content {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -556,90 +684,50 @@
             margin: 0 auto;
         }
 
-        .unodc-image {
-            flex: 1;
-            min-width: 300px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .unodc-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .unodc-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .unodc-text h3 {
-            color: var(--accent1);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        /* NEW: Book Section */
-        .book-section {
-            padding: 80px 0;
-        }
-
-        .book-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .book-cover {
+        .unodc-image, .book-cover {
             flex: 1;
             min-width: 250px;
-            max-width: 300px;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
 
-        .book-cover img {
+        .unodc-image:hover, .book-cover:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .unodc-image img, .book-cover img {
             width: 100%;
             height: auto;
             display: block;
+            loading: lazy;
         }
 
-        .book-details {
-            flex: 2;
+        .unodc-text, .book-details {
+            flex: 1;
             min-width: 300px;
         }
 
-        .book-details h3 {
-            color: var(--accent1);
+        .unodc-text h3, .book-details h3 {
+            color: var(--primary-dark);
             margin-bottom: 15px;
             font-size: 1.8rem;
         }
 
         .book-author {
+            color: var(--text-medium);
+            margin-bottom: 15px;
             font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text);
         }
 
         .book-meta {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .book-meta p {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        /* NEW: Facebook Embed Section */
-        .facebook-embed-section {
-            background-color: #f8f9fa;
-            padding: 80px 0;
+            margin-bottom: 5px;
         }
 
         .facebook-container {
@@ -650,97 +738,129 @@
 
         .fb-page {
             margin: 0 auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-radius: 12px;
             overflow: hidden;
         }
 
-        /* Responsive */
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .stagger-item {
+            opacity: 0;
+        }
+
+        /* Floating elements */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, -15px); }
+            100% { transform: translate(0, 0px); }
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .btn {
+            .mobile-menu-btn {
                 display: block;
-                margin: 10px auto;
-                max-width: 200px;
             }
 
-            .btn-outline {
-                margin-left: auto;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .testimonial-card {
-                min-width: 280px;
-            }
-
-            .founder-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .founder-info h3 {
-                font-size: 1.5rem;
-            }
-
-            .program-card {
-                max-width: 100%;
-            }
-            
-            .testimonial-nav {
-                display: none;
-            }
-            
-            .video-error {
-                padding: 10px;
-            }
-            
-            .video-error i {
-                font-size: 2rem;
-            }
-
-            .portrait-container {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
                 width: 100%;
-                height: 300px;
-            }
-            
-            .unodc-content, .book-content {
+                background-color: var(--white);
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
             }
-            
-            .book-cover {
-                margin: 0 auto;
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
             }
+
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .btn { display: block; margin: 10px auto; max-width: 200px; }
+            .btn-outline { margin-left: auto; margin-top: 10px; }
+            .section-title { font-size: 2rem; }
+            .founder-image { width: 150px; height: 150px; }
+            .testimonial-nav { display: none !important; }
+            .testimonial-card p { font-size: 0.95rem; }
+            .unodc-content, .book-content { flex-direction: column; text-align: center; }
+            .book-cover { margin: 0 auto; max-width: 250px; }
+            section { padding: 70px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 150px 0 80px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .feature-card { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <!-- Facebook SDK -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v24.0"></script>
 
-    <div class="container">
-        <header>
-            <!-- Logo could be added here -->
-        </header>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/be063ad8-c660-42a9-8ccd-db48d6bf708d_dwru5k.png" alt="Funlish Logo">
+                    <span>Funlish</span>
+                </a>
+                <nav>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="nav-links" id="navLinks">
+                        <a href="#about">About</a>
+                        <a href="#different">Why Funlish</a>
+                        <a href="#founder">Founder</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-        <section class="hero">
-            <h1>Funlish Language School</h1>
-            <p>Have Fun With English!</p>
-            <a href="#contact" class="btn">Get Started</a>
-            <a href="#about" class="btn btn-outline">Learn More</a>
-        </section>
-    </div>
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Funlish Language School</h1>
+            <p class="fade-in">Have Fun With English!</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn fade-in">Get Started</a>
+                <a href="#about" class="btn btn-outline fade-in">Learn More</a>
+            </div>
+        </div>
+    </section>
 
     <section id="about">
         <div class="container">
@@ -751,7 +871,7 @@
         </div>
     </section>
 
-    <section id="different">
+    <section id="different" class="section-bg">
         <div class="container">
             <h2 class="section-title">Why Funlish is Different</h2>
             <div class="different-content">
@@ -759,20 +879,18 @@
             </div>
 
             <div class="features">
-                <div class="feature-card">
-                    <i class="fas fa-globe"></i>
+                <div class="feature-card stagger-item">
+                    <i class="fas fa-globe floating"></i>
                     <h3>Global Connections</h3>
                     <p>Collaborate with students worldwide through our international partnerships.</p>
                 </div>
-
-                <div class="feature-card">
-                    <i class="fas fa-gamepad"></i>
+                <div class="feature-card stagger-item">
+                    <i class="fas fa-gamepad floating"></i>
                     <h3>Learning Through Play</h3>
                     <p>Our games and contests make mastering English enjoyable and effective.</p>
                 </div>
-
-                <div class="feature-card">
-                    <i class="fas fa-graduation-cap"></i>
+                <div class="feature-card stagger-item">
+                    <i class="fas fa-graduation-cap floating"></i>
                     <h3>Exam Excellence</h3>
                     <p>Specialized support for ICSE & ISC English exams with proven results.</p>
                 </div>
@@ -794,15 +912,14 @@
                     </div>
                 </div>
                 <div class="program-details">
-                    <div class="program-card">
+                    <div class="program-card stagger-item">
                         <h4>About Funlish</h4>
                         <p>Funlish inspires students from primary to high school to love English through fun quizzes, creative writing, drama, and more. We boost reading, writing, and communication skills, unlocking the endless possibilities of English!</p>
                         <div class="image-container">
                             <img src="https://res.cloudinary.com/dokuekd32/image/upload/v1756896851/224332367_1891758380984725_1027602030616335202_n_geymce.png" alt="English Language Learning">
                         </div>
                     </div>
-
-                    <div class="program-card">
+                    <div class="program-card stagger-item">
                         <h4>About TCPDI</h4>
                         <p>TCPDI, an NGO in a Kolkata suburb, transforms lives by educating socio-economically disadvantaged children for peace in violence-prone communities. Collaborating with Duke University students for two years, we nurture harmony and hope.</p>
                         <div class="image-container">
@@ -814,16 +931,32 @@
         </div>
     </section>
 
-    <section id="testimonials">
+    <!-- TESTIMONIALS - ALL 8 (3 NEW + 5 OLD) -->
+    <section id="testimonials" class="section-bg">
         <div class="container">
             <h2 class="section-title">What People Say</h2>
             <div class="testimonials">
-                <div class="testimonial-slider">
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <!-- NEW ALUMNI -->
+                    <div class="testimonial-card">
+                        <p>“I owe my love for writing and creativity to Swati Baksi Ma’am. She believed in me, guided me to publish my first book, and changed the course of my life forever.”</p>
+                        <div class="author">— Sarba Roy, Alumni (India)</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>“Swati sister’s classes were unlike any other — fun, structured, and full of life lessons. Her system taught us teamwork, leadership, and how to respect differences while learning English.”</p>
+                        <div class="author">— Pratyush Ranjan Sen Sarma, Alumni (India)</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>“Swati aunty helped me overcome my fear of English and discover my confidence through plays and coordination. She’s not just a teacher to me, she’s family — a blessing I’ll always be grateful for.”</p>
+                        <div class="author">— Snehashis Nath, Alumni (India)</div>
+                    </div>
+
+                    <!-- EXISTING -->
                     <div class="testimonial-card">
                         <p>I have been collaborating with Mrs Swati Bakshi, her fellow teachers and students from her school since 2020. Swati Bakshi is a creative, highly motivated educational leader. She is keen on developing her students' 21-st Century Skills. The Funlishians under the guidance of Swati Baksi have attended some amazing sessions of the Global Readers' Club.</p>
                         <div class="author">— Nadezhda Ivanova, English Teacher, (Krasnoyarsk, Russia)</div>
                     </div>
-<div class="testimonial-card">
+                    <div class="testimonial-card">
                         <p>Her dedication to fostering international connections and nurturing global citizens is truly commendable. May this partnership continue to flourish, inspiring more meaningful exchanges and lifelong connections.</p>
                         <div class="author">— Mrs Nirmaladevi Kandasamy,ESL Expert, SK St Patrick (Malaysia)</div>
                     </div>
@@ -839,19 +972,11 @@
                         <p>Inside Funlish, I never once felt left out. Ma'am always encouraged me to take part in the latest projects, and it has truly been a blessing to be guided by such a wonderful human being. Her resilience and patience in teaching are beyond comparison, and her unwavering support gave me both the opportunity and the confidence to speak and create on a global stage.</p>
                         <div class="author">— Swarnava Mazumder, Alumni (India)</div>
                     </div>
-                    <div class="testimonial-card">
-                        <p>The teachers at Funlish are amazing! They're always patient and encouraging, creating a safe space where we can make mistakes and learn without fear.</p>
-                        <div class="author">— Vikram Singh, Class VII</div>
-                    </div>
                 </div>
-                
+
                 <div class="testimonial-nav">
-                    <div class="testimonial-nav-btn prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div class="testimonial-nav-btn next">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
+                    <div class="testimonial-nav-btn prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="testimonial-nav-btn next"><i class="fas fa-chevron-right"></i></div>
                 </div>
             </div>
         </div>
@@ -861,55 +986,36 @@
         <div class="container">
             <h2 class="section-title">Funlish in Action</h2>
             <div class="video-gallery">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/D0kS9FuPzuU" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/TKhiuwfANYI" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/gKTrw1Mvkno" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/vio3Qy7IjxI" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/9ys6G3Zi58o" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dOD4I1ssCZM" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/cju_mXVq8fk" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/-ARs1FhucPw" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/R96RBFk_IMM" title="Funlish YouTube video" allowfullscreen loading="lazy"></iframe>
-                </div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/D0kS9FuPzuU" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/TKhiuwfANYI" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/gKTrw1Mvkno" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/vio3Qy7IjxI" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/9ys6G3Zi58o" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/dOD4I1ssCZM" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/cju_mXVq8fk" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/-ARs1FhucPw" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/R96RBFk_IMM" title="Funlish Video" allowfullscreen loading="lazy"></iframe></div>
             </div>
         </div>
     </section>
 
-    <section id="climate-collabs">
+    <section id="climate-collabs" class="section-bg">
         <div class="container">
             <h2 class="section-title">Online Collaborations on Climate Change & International Exchange</h2>
             <div class="image-gallery">
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_uadt2q.png" alt="Climate Collaboration 1"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 2"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/6_gxzrhl.png" alt="Climate Collaboration 3"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_gt6yrv.png" alt="Climate Collaboration 4"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/4_nyri2d.png" alt="Climate Collaboration 5"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/5_ouwdjr.png" alt="Climate Collaboration 6"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/7_tdxawu.png" alt="Climate Collaboration 7"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/abe25a71-d47e-4ea0-8728-4f81f2229340_prnhwf.jpg" alt="Climate Collaboration 8"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/8_kvybrd.png" alt="Climate Collaboration 9"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_uadt2q.png" alt="Climate Collaboration 1" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_g7c2as.png" alt="Climate Collaboration 2" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/6_gxzrhl.png" alt="Climate Collaboration 3" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_gt6yrv.png" alt="Climate Collaboration 4" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/4_nyri2d.png" alt="Climate Collaboration 5" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/5_ouwdjr.png" alt="Climate Collaboration 6" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/7_tdxawu.png" alt="Climate Collaboration 7" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/abe25a71-d47e-4ea0-8728-4f81f2229340_prnhwf.jpg" alt="Climate Collaboration 8" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/8_kvybrd.png" alt="Climate Collaboration 9" loading="lazy"></div>
             </div>
         </div>
     </section>
 
-    <!-- NEW: Facebook Embed Section -->
     <section class="facebook-embed-section">
         <div class="container">
             <h2 class="section-title">Follow Us on Facebook</h2>
@@ -935,23 +1041,19 @@
         <div class="container">
             <h2 class="section-title">Our Top Performers</h2>
             <div class="image-gallery">
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_itnd79.png" alt="Top Performer 1"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_hysiol.png" alt="Top Performer 2"></div>
-                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_laznnv.png" alt="Top Performer 3"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_itnd79.png" alt="Top Performer 1" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/3_hysiol.png" alt="Top Performer 2" loading="lazy"></div>
+                <div class="image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_laznnv.png" alt="Top Performer 3" loading="lazy"></div>
             </div>
         </div>
     </section>
 
-    <section id="recycling-campaign">
+    <section id="recycling-campaign" class="section-bg">
         <div class="container">
             <h2 class="section-title">Electronic Product Recycling Campaign</h2>
             <div class="image-gallery">
-                <div class="recycling-image-container">
-                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/1_eirhva.png" alt="Waste Collection">
-                </div>
-                <div class="recycling-image-container">
-                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/2_rdwuga.png" alt="Waste Collection">
-                </div>
+                <div class="recycling-image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/1_eirhva.png" alt="Waste Collection" loading="lazy"></div>
+                <div class="recycling-image-container"><img src="https://res.cloudinary.com/dokuekd32/image/upload/2_rdwuga.png" alt="Waste Collection" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -959,18 +1061,13 @@
     <section id="media-coverage" style="background-color: #f8f9fa; padding: 80px 0;">
         <div class="container">
             <h2 class="section-title">Covered by Jagran Josh</h2>
-            <div class="media-content" style="text-align: center; margin: 40px 0;">
+            <div style="text-align: center; margin: 40px 0;">
                 <div style="max-width: 800px; margin: 0 auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <p style="margin-bottom: 25px; font-size: 1.1rem;">Funlish was recently featured in Jagran Josh for our impactful RiseUp4Peace initiative, where youth advocates spread awareness on disability rights and inclusive classrooms.</p>
-                    
                     <div style="margin: 30px 0; text-align: center;">
-                        <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" loading="lazy">
                     </div>
-                    
-                    <a href="https://www.jagranjosh.com/news/riseup4peace-initiative-youth-advocates-spread-awareness-on-disability-rights-and-inclusive-classrooms-173535" 
-                       target="_blank" 
-                       class="btn" 
-                       style="display: inline-block; margin: 10px; background-color: #fd700e; color: white;">
+                    <a href="https://www.jagranjosh.com/news/riseup4peace-initiative-youth-advocates-spread-awareness-on-disability-rights-and-inclusive-classrooms-173535" target="_blank" class="btn" style="background-color: #fd700e; color: white;">
                        Read the Article
                     </a>
                 </div>
@@ -978,13 +1075,12 @@
         </div>
     </section>
 
-    <!-- NEW: UNODC Feature Section -->
     <section class="unodc-section">
         <div class="container">
             <h2 class="section-title">Featured by UNODC</h2>
             <div class="unodc-content">
                 <div class="unodc-image">
-                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/eDUmAIN2_gtgppn.jpg" alt="UNODC Feature">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/eDUmAIN2_gtgppn.jpg" alt="UNODC Feature" loading="lazy">
                 </div>
                 <div class="unodc-text">
                     <h3>Global Educator Recognition</h3>
@@ -996,13 +1092,12 @@
         </div>
     </section>
 
-    <!-- NEW: Book Section -->
     <section class="book-section">
         <div class="container">
             <h2 class="section-title">ICSE English Papers Class X</h2>
             <div class="book-content">
                 <div class="book-cover">
-                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/814EajOCkWL._SL1500__kfwre1.jpg" alt="ICSE English Papers Class X Book Cover">
+                    <img src="https://res.cloudinary.com/dokuekd32/image/upload/814EajOCkWL._SL1500__kfwre1.jpg" alt="ICSE English Papers Class X Book Cover" loading="lazy">
                 </div>
                 <div class="book-details">
                     <h3>ICSE English Papers Class X</h3>
@@ -1025,10 +1120,12 @@
             <h2 class="section-title">Join the Fun!</h2>
             <div class="contact-content">
                 <p>Ready to have fun with English? Connect with us to learn more about our programs.</p>
-                <a href="https://www.facebook.com/Funlish" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@FUNLISHFUNTIME" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://in.linkedin.com/in/swati-bakshi-purkayastha-83832a7" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Funlish" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@FUNLISHFUNTIME" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://in.linkedin.com/in/swati-bakshi-purkayastha-83832a7" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                </div>
                 <div style="margin-top: 40px;">
                     <a href="#contact" class="btn">Join Us Today!</a>
                 </div>
@@ -1038,135 +1135,162 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Funlish Language School | Founded by Swati Bakshi Purkyastha</p>
+            <p>© 2025 Funlish Language School | Founded by Swati Bakshi Purkayastha</p>
         </div>
     </footer>
 
-    <script>
+    <script defer>
         document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.querySelector('.testimonial-slider');
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+
+            // Testimonial slider
+            const slider = document.getElementById('testimonialSlider');
             const prevBtn = document.querySelector('.testimonial-nav-btn.prev');
             const nextBtn = document.querySelector('.testimonial-nav-btn.next');
-            let scrollAmount = 0;
-            const scrollStep = 380;
             let autoScrollInterval;
             let isScrolling = false;
-            
-            // Function to scroll testimonials
-            function scrollTestimonials(direction) {
+            let startX = 0;
+            let scrollLeft = 0;
+
+            function getCardWidth() {
+                const card = slider.querySelector('.testimonial-card');
+                if (!card) return 300;
+                const style = getComputedStyle(card);
+                return card.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight);
+            }
+
+            function nextSlide() {
                 if (isScrolling) return;
-                
                 isScrolling = true;
-                const containerWidth = slider.clientWidth;
-                const scrollWidth = slider.scrollWidth;
-                const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 30; // width + gap
-                
-                if (direction === 'next') {
-                    scrollAmount += cardWidth;
-                    if (scrollAmount >= scrollWidth - containerWidth) {
-                        scrollAmount = 0;
-                    }
+                const cardWidth = getCardWidth();
+                const maxScroll = slider.scrollWidth - slider.clientWidth;
+                let newScroll = slider.scrollLeft + cardWidth;
+
+                if (newScroll >= maxScroll) {
+                    slider.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
-                    scrollAmount -= cardWidth;
-                    if (scrollAmount < 0) {
-                        scrollAmount = scrollWidth - containerWidth;
-                    }
+                    slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
                 }
-                
-                slider.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-                
-                // Reset scrolling flag after animation completes
-                setTimeout(() => {
-                    isScrolling = false;
-                }, 500);
+                setTimeout(() => { isScrolling = false; }, 600);
             }
-            
-            // Set up auto-scroll every 10 seconds
+
+            function prevSlide() {
+                if (isScrolling) return;
+                isScrolling = true;
+                const cardWidth = getCardWidth();
+                let newScroll = slider.scrollLeft - cardWidth;
+
+                if (newScroll <= 0) {
+                    slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                }
+                setTimeout(() => { isScrolling = false; }, 600);
+            }
+
             function startAutoScroll() {
-                autoScrollInterval = setInterval(() => {
-                    scrollTestimonials('next');
-                }, 10000); // 10 seconds
+                stopAutoScroll();
+                autoScrollInterval = setInterval(nextSlide, 8000);
             }
-            
-            // Stop auto-scroll when user interacts
+
             function stopAutoScroll() {
                 clearInterval(autoScrollInterval);
             }
-            
-            // Initialize auto-scroll
-            startAutoScroll();
-            
-            // Add event listeners for buttons
-            prevBtn.addEventListener('click', () => {
-                stopAutoScroll();
-                scrollTestimonials('prev');
-                startAutoScroll();
+
+            nextBtn?.addEventListener('click', () => { stopAutoScroll(); nextSlide(); startAutoScroll(); });
+            prevBtn?.addEventListener('click', () => { stopAutoScroll(); prevSlide(); startAutoScroll(); });
+
+            ['touchstart', 'mousedown'].forEach(evt => {
+                slider.addEventListener(evt, e => {
+                    startX = evt === 'touchstart' ? e.touches[0].clientX : e.pageX;
+                    scrollLeft = slider.scrollLeft;
+                    stopAutoScroll();
+                    slider.style.cursor = 'grabbing';
+                }, { passive: true });
             });
-            
-            nextBtn.addEventListener('click', () => {
-                stopAutoScroll();
-                scrollTestimonials('next');
-                startAutoScroll();
+
+            ['touchend', 'mouseup', 'mouseleave'].forEach(evt => {
+                slider.addEventListener(evt, () => {
+                    setTimeout(startAutoScroll, 5000);
+                    slider.style.cursor = 'grab';
+                });
             });
-            
-            // Pause auto-scroll when user hovers over testimonials
+
+            slider.addEventListener('mousemove', e => {
+                if (!startX) return;
+                e.preventDefault();
+                const x = e.pageX;
+                const walk = (startX - x) * 2;
+                slider.scrollLeft = scrollLeft + walk;
+            });
+
             slider.addEventListener('mouseenter', stopAutoScroll);
             slider.addEventListener('mouseleave', startAutoScroll);
-            
-            // Support for touch devices
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            slider.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-                stopAutoScroll();
+
+            startAutoScroll();
+
+            window.addEventListener('resize', () => {
+                clearInterval(autoScrollInterval);
+                setTimeout(startAutoScroll, 1000);
             });
-            
-            slider.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-                setTimeout(startAutoScroll, 5000); // Restart after 5 seconds of inactivity
-            });
-            
-            function handleSwipe() {
-                const minSwipeDistance = 50;
-                
-                if (touchEndX < touchStartX && touchStartX - touchEndX > minSwipeDistance) {
-                    // Swipe left - next
-                    scrollTestimonials('next');
-                } 
-                
-                if (touchEndX > touchStartX && touchEndX - touchStartX > minSwipeDistance) {
-                    // Swipe right - previous
-                    scrollTestimonials('prev');
-                }
+
+            // Stagger animations for elements
+            const staggerItems = document.querySelectorAll('.stagger-item');
+            if (staggerItems.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.style.animation = `fadeInUp 0.6s ease forwards ${index * 0.1}s`;
+                            }, 100);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                staggerItems.forEach(item => {
+                    observer.observe(item);
+                });
             }
 
-            // Add error handling for YouTube videos
+            // Video error handling
             document.querySelectorAll('.video-container iframe').forEach(iframe => {
+                iframe.loading = 'lazy';
                 iframe.onerror = function() {
                     this.parentNode.innerHTML = `
                         <div class="video-error">
                             <i class="fas fa-exclamation-triangle"></i>
                             <p>Video temporarily unavailable</p>
-                            <a href="${this.src.replace('embed/', 'watch?v=')}" 
-                               target="_blank" class="btn">Watch on YouTube</a>
+                            <a href="${this.src.replace('embed/', 'watch?v=')}" target="_blank" class="btn">Watch on YouTube</a>
                         </div>
                     `;
                 };
-            });
-
-            const socialLinks = document.querySelectorAll('.social-link');
-            socialLinks.forEach(link => {
-                link.addEventListener('mouseenter', () => {
-                    link.style.transform = 'scale(1.2)';
-                });
-                link.addEventListener('mouseleave', () => {
-                    link.style.transform = 'scale(1)';
-                });
             });
         });
     </script>
