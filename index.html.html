@@ -64,6 +64,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Service",
+        "email": "bakshi.swati@gmail.com",
         "url": "https://www.facebook.com/Funlish"
       },
       "sameAs": [
@@ -486,6 +487,7 @@
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
             cursor: grab;
+            transition: scroll 1.2s ease-in-out;
         }
 
         .testimonial-slider::-webkit-scrollbar { display: none; }
@@ -659,6 +661,11 @@
             background-color: var(--primary);
             color: var(--white);
             transform: translateY(-5px);
+        }
+
+        /* X/Twitter icon fallback */
+        .fa-x-twitter:before {
+            content: "\f099"; /* Twitter bird icon as fallback */
         }
 
         footer {
@@ -1120,14 +1127,15 @@
             <h2 class="section-title">Join the Fun!</h2>
             <div class="contact-content">
                 <p>Ready to have fun with English? Connect with us to learn more about our programs.</p>
+                <p style="margin: 20px 0;"><strong>Email:</strong> <a href="mailto:bakshi.swati@gmail.com" style="color: var(--primary); text-decoration: none;">bakshi.swati@gmail.com</a></p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/Funlish" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.youtube.com/@FUNLISHFUNTIME" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a href="https://in.linkedin.com/in/swati-bakshi-purkayastha-83832a7" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://x.com/SwatiBakshiPur1" class="social-link" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://x.com/SwatiBakshiPur1" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
                 <div style="margin-top: 40px;">
-                    <a href="#contact" class="btn">Join Us Today!</a>
+                    <a href="mailto:bakshi.swati@gmail.com" class="btn">Hit me an Email!</a>
                 </div>
             </div>
         </div>
@@ -1197,7 +1205,7 @@
                 } else {
                     slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
                 }
-                setTimeout(() => { isScrolling = false; }, 600);
+                setTimeout(() => { isScrolling = false; }, 800);
             }
 
             function prevSlide() {
@@ -1211,7 +1219,7 @@
                 } else {
                     slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
                 }
-                setTimeout(() => { isScrolling = false; }, 600);
+                setTimeout(() => { isScrolling = false; }, 800);
             }
 
             function startAutoScroll() {
@@ -1296,4 +1304,3 @@
     </script>
 </body>
 </html>
-
