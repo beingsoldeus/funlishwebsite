@@ -32,11 +32,11 @@
 
     <!-- Favicon & Preload Critical Resources -->
     <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dokuekd32/image/upload/be063ad8-c660-42a9-8ccd-db48d6bf708d_dwru5k.png">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fredoka+One&display=swap" as="style">
     <link rel="preload" href="https://res.cloudinary.com/dokuekd32/image/upload/v1756896894/1718254117047_ixz4w7.jpg" as="image">
 
     <!-- Fonts (Async Load) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Font Awesome (Async) -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
@@ -77,9 +77,10 @@
 
     <style>
         :root {
-            --primary: #0fb9b1;
-            --primary-light: #7fffd4;
-            --primary-dark: #0a8a84;
+            /* Light Theme Variables - BLUE (#13e8e8) */
+            --primary: #13e8e8;
+            --primary-light: #6ef2f2;
+            --primary-dark: #0fb9b1;
             --secondary: #ff7e5f;
             --secondary-light: #ffb8a6;
             --accent: #f9c74f;
@@ -89,11 +90,34 @@
             --text-light: #b2bec3;
             --white: #ffffff;
             --light-bg: #f8f9fa;
+            --card-bg: #ffffff;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
             --border-radius: 16px;
             --transition: all 0.3s ease;
+            --glass-bg: rgba(255, 255, 255, 0.9);
             --notification-bg: #b0fcff;
+        }
+
+        /* Dark Theme Variables - BLUE (#13e8e8) */
+        [data-theme="dark"] {
+            --primary: #13e8e8;
+            --primary-light: #6ef2f2;
+            --primary-dark: #0fb9b1;
+            --secondary: #ff7e5f;
+            --secondary-light: #ffb8a6;
+            --accent: #f9c74f;
+            --accent-light: #fde8a6;
+            --text-dark: #f3f4f6;
+            --text-medium: #d1d5db;
+            --text-light: #9ca3af;
+            --white: #1f2937;
+            --light-bg: #111827;
+            --card-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.3);
+            --glass-bg: rgba(30, 41, 59, 0.9);
+            --notification-bg: #1e40af;
         }
 
         * {
@@ -104,6 +128,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
 
         body {
@@ -112,6 +137,7 @@
             background-color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
@@ -120,14 +146,16 @@
             padding: 0 20px;
         }
 
-        header { 
+        /* Header - Modern Glassmorphism */
+        header {
             padding: 20px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
+            background: var(--glass-bg);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
         }
@@ -151,6 +179,7 @@
             font-size: 1.5rem;
             color: var(--primary);
             text-decoration: none;
+            font-weight: 700;
         }
 
         .logo img {
@@ -161,6 +190,7 @@
         .nav-links {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
         .nav-links a {
@@ -190,6 +220,31 @@
             width: 100%;
         }
 
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            transition: var(--transition);
+            margin-left: 15px;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: white;
+            transform: rotate(15deg);
+        }
+
+        /* Mobile Menu Button */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -197,8 +252,20 @@
             font-size: 1.5rem;
             color: var(--text-dark);
             cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: var(--primary);
+            color: white;
+            transition: var(--transition);
         }
 
+        .mobile-menu-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section - BLUE Theme */
         .hero {
             text-align: center;
             padding: 180px 0 120px;
@@ -355,6 +422,7 @@
             font-size: 1.4rem;
         }
 
+        /* Founder Section */
         .founder-section {
             text-align: center;
             padding: 60px 40px;
@@ -396,7 +464,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            loading: lazy;
             transition: var(--transition);
         }
 
@@ -463,7 +530,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            loading: lazy;
             transition: var(--transition);
         }
 
@@ -547,40 +613,6 @@
             font-size: 0.95rem;
         }
 
-        .testimonial-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            pointer-events: none;
-            z-index: 10;
-        }
-
-        .testimonial-nav-btn {
-            background-color: var(--primary);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            pointer-events: auto;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .testimonial-nav-btn:hover {
-            background-color: var(--secondary);
-            transform: scale(1.1);
-        }
-
-        .testimonial-nav-btn.prev { margin-left: -25px; }
-        .testimonial-nav-btn.next { margin-right: -25px; }
-
         .video-gallery, .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -611,7 +643,6 @@
             height: 100%;
             border: none;
             object-fit: cover;
-            loading: lazy;
         }
 
         .video-error {
@@ -666,7 +697,7 @@
 
         /* X/Twitter icon fallback */
         .fa-x-twitter:before {
-            content: "\f099"; /* Twitter bird icon as fallback */
+            content: "\f099";
         }
 
         footer {
@@ -710,7 +741,6 @@
             width: 100%;
             height: auto;
             display: block;
-            loading: lazy;
         }
 
         .unodc-text, .book-details {
@@ -833,31 +863,106 @@
             border-bottom: 10px solid var(--notification-bg);
         }
 
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            padding: 100px 20px 40px;
+            transition: right 0.4s ease;
+            z-index: 999;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu .nav-links {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .mobile-menu .nav-links a {
+            font-size: 1.2rem;
+            padding: 12px 0;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition);
+            z-index: 997;
+            box-shadow: var(--shadow);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
         /* Media Queries */
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
             }
 
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: var(--transition);
-                z-index: 999;
-            }
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
+            .nav-links:not(.mobile-menu .nav-links) {
+                display: none;
             }
 
             .hero h1 { font-size: 2.5rem; }
@@ -891,6 +996,32 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v24.0"></script>
 
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#different">Why Funlish</a>
+            <a href="#founder">Founder</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -899,17 +1030,20 @@
                     <span>Funlish</span>
                 </a>
                 <nav>
-                    <button class="mobile-menu-btn" id="mobileMenuBtn">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="nav-links" id="navLinks">
+                    <div class="nav-links">
                         <a href="#about">About</a>
                         <a href="#different">Why Funlish</a>
                         <a href="#founder">Founder</a>
                         <a href="#testimonials">Testimonials</a>
                         <a href="#gallery">Gallery</a>
                         <a href="#contact">Contact</a>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
                     </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -1003,15 +1137,15 @@
                 <div class="testimonial-slider" id="testimonialSlider">
                     <!-- NEW ALUMNI -->
                     <div class="testimonial-card">
-                        <p>“I owe my love for writing and creativity to Swati Baksi Ma’am. She believed in me, guided me to publish my first book, and changed the course of my life forever.”</p>
+                        <p>“I owe my love for writing and creativity to Swati Baksi Ma'am. She believed in me, guided me to publish my first book, and changed the course of my life forever.”</p>
                         <div class="author">— Sarba Roy, Alumni (India)</div>
                     </div>
                     <div class="testimonial-card">
-                        <p>“Swati sister’s classes were unlike any other — fun, structured, and full of life lessons. Her system taught us teamwork, leadership, and how to respect differences while learning English.”</p>
+                        <p>“Swati sister's classes were unlike any other — fun, structured, and full of life lessons. Her system taught us teamwork, leadership, and how to respect differences while learning English.”</p>
                         <div class="author">— Pratyush Ranjan Sen Sarma, Alumni (India)</div>
                     </div>
                     <div class="testimonial-card">
-                        <p>“Swati aunty helped me overcome my fear of English and discover my confidence through plays and coordination. She’s not just a teacher to me, she’s family — a blessing I’ll always be grateful for.”</p>
+                        <p>“Swati aunty helped me overcome my fear of English and discover my confidence through plays and coordination. She's not just a teacher to me, she's family — a blessing I'll always be grateful for.”</p>
                         <div class="author">— Snehashis Nath, Alumni (India)</div>
                     </div>
 
@@ -1122,14 +1256,14 @@
         </div>
     </section>
 
-    <section id="media-coverage" style="background-color: #f8f9fa; padding: 80px 0;">
+    <section id="media-coverage" style="background-color: var(--light-bg); padding: 80px 0;">
         <div class="container">
             <h2 class="section-title">Covered by Jagran Josh</h2>
             <div style="text-align: center; margin: 40px 0;">
-                <div style="max-width: 800px; margin: 0 auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <p style="margin-bottom: 25px; font-size: 1.1rem;">Funlish was recently featured in Jagran Josh for our impactful RiseUp4Peace initiative, where youth advocates spread awareness on disability rights and inclusive classrooms.</p>
+                <div style="max-width: 800px; margin: 0 auto; padding: 30px; background: var(--card-bg); border-radius: 15px; box-shadow: var(--shadow);">
+                    <p style="margin-bottom: 25px; font-size: 1.1rem; color: var(--text-medium);">Funlish was recently featured in Jagran Josh for our impactful RiseUp4Peace initiative, where youth advocates spread awareness on disability rights and inclusive classrooms.</p>
                     <div style="margin: 30px 0; text-align: center;">
-                        <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" loading="lazy">
+                        <img src="https://img.jagranjosh.com/images/2024/June/1362024/inclusivity-in-classroom.jpg" alt="Jagran Josh Coverage" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: var(--shadow);" loading="lazy">
                     </div>
                     <a href="https://www.jagranjosh.com/news/riseup4peace-initiative-youth-advocates-spread-awareness-on-disability-rights-and-inclusive-classrooms-173535" target="_blank" class="btn" style="background-color: #fd700e; color: white;">
                        Read the Article
@@ -1223,23 +1357,117 @@
                 }
             });
 
-            // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navLinks = document.getElementById('navLinks');
+            // Theme Toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+            const currentTheme = localStorage.getItem('theme') || 'light';
             
-            mobileMenuBtn.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                updateThemeIcon();
+            }
+            
+            function updateThemeIcon() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const icons = document.querySelectorAll('.theme-toggle i');
+                icons.forEach(icon => {
+                    icon.className = currentTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+                });
+            }
+            
+            themeToggle?.addEventListener('click', toggleTheme);
+            mobileThemeToggle?.addEventListener('click', toggleTheme);
+            updateThemeIcon();
+
+            // Mobile Menu Functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                
+                // Update hamburger icon
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.className = mobileMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            }
+            
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+            
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
             });
 
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                });
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
             });
+            
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Progress Bar
+            const progressBar = document.getElementById('progressBar');
+            
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+
+            // Active Navigation Link
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            function updateActiveLink() {
+                let current = '';
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Mobile menu links
+                mobileMenuLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveLink);
 
             // Testimonial slider
             const slider = document.getElementById('testimonialSlider');
@@ -1410,6 +1638,34 @@
             window.addEventListener('beforeunload', function() {
                 clearTimeout(popupTimeout);
                 clearTimeout(reappearTimeout);
+            });
+
+            // Add keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+
+            // Smooth Scrolling with Offset
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         });
     </script>
